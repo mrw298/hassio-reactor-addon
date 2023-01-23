@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CONFIG_DIR=/config/reactor
-CONFIG_SRC=/var/reactor/config
+CONFIG_DIR="/config/reactor"
+CONFIG_SRC="/var/reactor/config"
 
 # Map the config
 if [ ! -d "$CONFIG_DIR" ]; then
