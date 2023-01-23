@@ -1,11 +1,10 @@
 ---
 name: Reactor
-version: 0.0.2
+version: 0.0.3
 slug: reactor
 description: An automation engine that integrates rules and actions
 arch:
   - amd64
-#  - i386
 image: mrw298/toggledbits-reactor-{arch}
 init: false
 url: https://github.com/mrw298/hassio-reactor-addon/tree/master/reactor
@@ -13,6 +12,7 @@ startup: application
 boot: auto
 homeassistant_api: true
 ingress: true
+ingress_port: 8111
 map:
   - config:rw
 ports:

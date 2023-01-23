@@ -10,8 +10,9 @@ LABEL \
   io.hass.arch="$BUILD_ARCH"
 
 RUN apk add bash
+SHELL ["/bin/bash", "-c"]
 
-COPY run.sh .
+COPY run.sh /opt/reactor/run.sh
 RUN chmod a+x run.sh
 
-CMD [ "run.sh" ]
+CMD [ "/bin/bash", "-c", "/opt/reactor/run.sh" ]
