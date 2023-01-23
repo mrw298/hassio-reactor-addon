@@ -13,3 +13,9 @@ startup: application
 boot: auto
 homeassistant_api: true
 ingress: true
+map:
+  - config:rw
+ports:
+  "8111/tcp": 8111
+ports_description:
+  "8111": "Port for reactor"
