@@ -1,6 +1,6 @@
 ---
 name: Reactor
-version: 0.0.3
+version: 0.0.4
 slug: reactor
 description: An automation engine that integrates rules and actions
 arch:
@@ -12,7 +12,6 @@ startup: application
 boot: auto
 homeassistant_api: true
 ingress: true
-ingress_port: 8111
 map:
   - config:rw
 ports:
