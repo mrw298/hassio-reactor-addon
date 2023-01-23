@@ -1,0 +1,5 @@
+---
+build_from:
+  amd64: toggledbits/reactor:latest-amd64
+#  i386: toggledbits/reactor:latest-amd64
+args: {}
