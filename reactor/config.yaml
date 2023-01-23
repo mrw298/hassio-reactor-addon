@@ -6,7 +6,7 @@ description: An automation engine that integrates rules and actions
 arch:
   - amd64
   - i386
-image: toggledbits/reactor:latest-{arch}
+image: toggledbits/reactor
 init: false
 url: https://github.com/mrw298/hassio-reactor-addon/tree/master/reactor
 startup: application
