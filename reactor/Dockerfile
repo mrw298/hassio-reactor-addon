@@ -18,7 +18,7 @@ SHELL ["/bin/bash", "-c"]
 COPY run.sh /opt/reactor/run.sh
 RUN chmod a+x run.sh
 
-ADD nginx.conf /etc/nginx/conf.d/default.conf
+ADD nginx.conf /etc/nginx/http.d/default.conf
 EXPOSE 8099
 
 ADD supervisord.conf /etc/supervisord.conf
