@@ -8,7 +8,7 @@ arch:
   - i386
 image: toggledbits/reactor:latest-{arch}
 init: false
-url: https://github.com/mrw298/hassio-reactor-addon
+url: https://github.com/mrw298/hassio-reactor-addon/tree/master/reactor
 startup: application
 boot: auto
 homeassistant_api: true
