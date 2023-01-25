@@ -9,8 +9,8 @@
 
 The reactor configuration files are copied to the `/config/reactor` directory on first start.
 
-1. Edit with your prefered editor e.g. (Studio Code Server) 
-   * [![Open this add-on in your Home Assistant instance.][addon-badge]][addon-code]
+1. Edit with your prefered editor:
+   * [Studio Code Server][addon-code]
 2. Add the homeassistant configuration to `/config/reactor/reactor.yaml` file
    * [Reactor Home Assistant Install Manual][reactor-docs-hass-install]
 
