@@ -3,6 +3,7 @@ FROM $BUILD_FROM
 
 ARG BUILD_VERSION
 ARG BUILD_ARCH
+ARG BASHIO_VERSION=0.14.3
 
 LABEL \
   io.hass.version="$BUILD_VERSION" \
@@ -11,7 +12,11 @@ LABEL \
 
 RUN \
   apk add --no-cache bash supervisor nginx; \
-  rm -rf /var/cache/apk/*
+  rm -rf /var/cache/apk/*; \
+  mkdir -p /usr/src/bashio \
+  && curl -L -f -s "https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz" | tar -xzf - --strip 1 -C /usr/src/bashio \
+  && mv /usr/src/bashio/lib /usr/lib/bashio \
+  && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
 SHELL ["/bin/bash", "-c"]
 
