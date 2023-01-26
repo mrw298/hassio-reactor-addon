@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bashio
 
+HASS_CONFIG_PATH="/data/options.json"
 CONFIG_DIR="/config/reactor"
 CONFIG_SRC="/opt/reactor/dist-config"
 
@@ -15,8 +16,11 @@ else
   echo "Using existing set-up"
 fi
 
-
-#yq eval -i "(.controllers[] | select(.id==\"hass\").config.access_token) |= \"$HASSIO_TOKEN\"" $CONFIG_DIR/reactor.yaml
+REACTOR_HASS_TOKEN=$(jq --raw-output '.long_lived_token // empty' $HASS_CONFIG_PATH)
+if [ -n "$REACTOR_HASS_TOKEN" ]; then
+  echo "Reactor Token is set, updating config"
+  yq eval -i "(.controllers[] | select(.id==\"hass\").config.access_token) |= \"$REACTOR_HASS_TOKEN\"" $CONFIG_DIR/reactor.yaml
+fi
 
 # Run the app
 node app.js -c /config/reactor

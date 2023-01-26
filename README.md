@@ -7,6 +7,15 @@
 
 ## Configuration
 
+The addon should attempt a basic configuration of reactor when it first
+starts and connect it to the home assistant instance.
+
+1. Create a long lived access token in Config > Users
+2. Add the long lived access token to the Reactor Addon configuration
+3. Start the addon
+
+## Advanced Configuration
+
 The reactor configuration files are copied to the `/config/reactor` directory on first start.
 
 1. Edit with your prefered editor:
