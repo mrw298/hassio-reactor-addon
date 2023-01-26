@@ -11,7 +11,7 @@ LABEL \
   io.hass.arch="$BUILD_ARCH"
 
 RUN \
-  apk add --no-cache bash supervisor nginx; \
+  apk add --no-cache bash supervisor nginx yq; \
   rm -rf /var/cache/apk/*; \
   mkdir -p /usr/src/bashio \
   && curl -L -f -s "https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz" | tar -xzf - --strip 1 -C /usr/src/bashio \

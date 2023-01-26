@@ -1,6 +1,6 @@
 ---
 name: Reactor
-version: 0.0.4
+version: 0.0.5
 slug: reactor
 description: An automation engine that integrates rules and actions
 arch:
@@ -10,6 +10,8 @@ init: false
 url: https://github.com/mrw298/hassio-reactor-addon/tree/master/reactor
 startup: application
 boot: auto
+hassio_api: true
+hassio_role: manager
 homeassistant_api: true
 ingress: true
 ingress_stream: true
@@ -19,3 +21,7 @@ ports:
   "8111/tcp": 8111
 ports_description:
   "8111": "Port for reactor"
+options:
+  long_lived_token: null
+schema:
+  long_lived_token: str
