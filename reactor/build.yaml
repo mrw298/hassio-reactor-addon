@@ -1,6 +1,7 @@
 ---
 build_from:
-  amd64: toggledbits/reactor:latest-amd64
-#  i386: toggledbits/reactor:latest-amd64
+  amd64: toggledbits/reactor-novol:latest-amd64
+  aarch64: toggledbits/reactor-novol:latest-aarch64
+  armv7l: toggledbits/reactor-novol:latest-armv7l
 args:
   BASHIO_VERSION: 0.14.3
