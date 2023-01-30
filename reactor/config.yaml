@@ -5,6 +5,8 @@ slug: reactor
 description: An automation engine that integrates rules and actions
 arch:
   - amd64
+  - armv7l
+  - aarch64
 image: mrw298/toggledbits-reactor-{arch}
 init: false
 url: https://github.com/mrw298/hassio-reactor-addon/tree/master/reactor

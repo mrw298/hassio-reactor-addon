@@ -17,10 +17,12 @@ else
   echo "Using existing set-up"
 fi
 
-REACTOR_HASS_TOKEN=$(jq --raw-output '.long_lived_token // empty' $HASS_CONFIG_PATH)
-if [ -n "$REACTOR_HASS_TOKEN" ]; then
-  echo "Reactor Token is set, updating config"
-  yq eval -i "(.controllers[] | select(.id==\"hass\").config.access_token) |= \"$REACTOR_HASS_TOKEN\"" $CONFIG_DIR/reactor.yaml
+if [ -f "$HASS_CONFIG_PATH" ]; then
+  REACTOR_HASS_TOKEN=$(jq --raw-output '.long_lived_token // empty' $HASS_CONFIG_PATH)
+  if [ -n "$REACTOR_HASS_TOKEN" ]; then
+    echo "Reactor Token is set, updating config"
+    yq eval -i "(.controllers[] | select(.id==\"hass\").config.access_token) |= \"$REACTOR_HASS_TOKEN\"" $CONFIG_DIR/reactor.yaml
+  fi
 fi
 
 #Setup data directory
