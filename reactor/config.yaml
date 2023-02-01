@@ -5,7 +5,7 @@ slug: reactor
 description: An automation engine that integrates rules and actions
 arch:
   - amd64
-  - armv7l
+  - armv7
   - aarch64
 image: mrw298/toggledbits-reactor-{arch}
 init: false
