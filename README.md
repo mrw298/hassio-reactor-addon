@@ -26,6 +26,6 @@ The reactor configuration files are copied to the `/config/reactor` directory on
 [addon-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon-reactor-repo]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fmrw298%2Fhassio-reactor-addon
-[addon-reactor]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=reactor&repository_url=https%3A%2F%2Fgithub.com%2Fmrw298%2Fhassio-reactor-addon
+[addon-reactor]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=0521a35e_reactor&repository_url=https%3A%2F%2Fgithub.com%2Fmrw298%2Fhassio-reactor-addon
 [addon-code]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_vscode&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [reactor-docs-hass-install]: https://reactor.toggledbits.com/docs/HassController/
