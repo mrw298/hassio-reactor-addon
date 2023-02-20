@@ -18,6 +18,10 @@ RUN \
   && mv /usr/src/bashio/lib /usr/lib/bashio \
   && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
+# Add some brief sanity checks
+RUN \
+  test -e /opt/reactor/dist-config/logging.yaml
+
 SHELL ["/bin/bash", "-c"]
 
 COPY run.sh /opt/reactor/run.sh
